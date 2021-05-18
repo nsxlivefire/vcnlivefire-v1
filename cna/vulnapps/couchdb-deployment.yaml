@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: vulnapps-prd
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: couchdb-deployment
+  namespace: vulnapps-prd
+spec:
+  selector:
+    matchLabels:
+      app: couchdb
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: couchdb
+    spec:
+      containers:
+      - name: couchdb
+        image: harbor-01a.livefire.solutions/vulnerableapps/couchdb:2.1.0
+        ports:
+        - containerPort: 5984
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: couchdb
+  namespace: vulnapps-prd
+spec:
+  type: ClusterIP
+  selector:
+    app: couchdb
+  ports:
+  - name: couchdb
+    port: 5984
+    targetPort: 5984
+
