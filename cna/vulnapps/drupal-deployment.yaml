@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: drupal
-        image: harbor-01a.livefire.solutions/vulnerableapps/drupal:8.5.0
+        image: harbor-01a.corp.local/vulnerableapps/drupal:8.5.0
         ports:
         - containerPort: 80
       affinity:
@@ -45,7 +45,7 @@ metadata:
     app.kubernetes.io/name: drupal
 spec:
   type: LoadBalancer
-  loadBalancerIP: 172.16.100.51
+  loadBalancerIP: 172.16.110.51
   ports:
   - port: 80
   selector:

@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
       - name: hackazon
-        image: harbor-01a.livefire.solutions/vulnerableapps/hackazon:latest
+        image: harbor-01a.corp.local/vulnerableapps/hackazon:latest
         ports:
         - containerPort: 80
 
@@ -59,7 +59,7 @@ metadata:
    kubernetes.io/ingress.class: avi
 spec:
   rules:
-  - host: hackazon.tkg.livefire.solutions
+  - host: hackazon.tkg.corp.local
     http:
       paths:
       - path: "/"

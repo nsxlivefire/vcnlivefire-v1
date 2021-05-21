@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: coffee
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: coffee
+  template:
+    metadata:
+      labels:
+        app: coffee
+    spec:
+      containers:
+      - name: coffee
+        image: harbor-01a.corp.local/library/nginxdemos/hello
+        ports:
+        - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tea
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: tea 
+  template:
+    metadata:
+      labels:
+        app: tea 
+    spec:
+      containers:
+      - name: tea 
+        image: harbor-01a.corp.local/library/nginxdemos/hello
+        ports:
+        - containerPort: 80

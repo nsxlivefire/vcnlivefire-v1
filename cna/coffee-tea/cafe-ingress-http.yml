@@ -6,7 +6,7 @@ metadata:
    kubernetes.io/ingress.class: avi
 spec:
   rules:
-  - host: cafe.tkg.livefire.solutions
+  - host: cafe.tkg.corp.local
     http:
       paths:
       - path: /tea

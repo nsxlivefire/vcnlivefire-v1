@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: mongo
-        image: harbor-01a.livefire.solutions/library/mongo:4.2
+        image: harbor-01a.corp.local/guestbook/mongo:4.2
         args:
           - --bind_ip
           - 0.0.0.0

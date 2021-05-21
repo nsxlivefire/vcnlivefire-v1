@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: guestbook
-        image:  harbor-01a.livefire.solutions/library/gb-frontend:v5
+        image:  harbor-01a.corp.local/guestbook/gb-frontend:v5
         resources:
           requests:
             cpu: 100m

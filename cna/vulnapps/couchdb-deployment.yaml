@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: couchdb
-        image: harbor-01a.livefire.solutions/vulnerableapps/couchdb:2.1.0
+        image: harbor-01a.corp.local/vulnerableapps/couchdb:2.1.0
         ports:
         - containerPort: 5984
 
